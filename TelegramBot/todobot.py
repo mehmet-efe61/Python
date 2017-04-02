@@ -6,7 +6,7 @@ import urllib
 
 db = DBHelper()
 
-TOKEN = "323067387:AAFPmobxPR9Ze8IeQZlvzvJ4AlCQepoxNso"
+TOKEN = "362336602:AAFy_B0N_PDxU0CBO2zCOdbM75J1Mw3ZOSc"
 URL = "https://api.telegram.org/bot{}/".format(TOKEN)
 
 def get_url(url):
