@@ -56,11 +56,11 @@ def handle_updates(updates):
         text = update["message"]["text"]
         chat = update["message"]["chat"]["id"]
         items = db.get_items(chat)  ##
-        if text == "/done":
+        if text == "/bitti":
             keyboard = build_keyboard(items)
             send_message("Silmek için bir öğe seçin", chat, keyboard)
         elif text == "/start":
-            send_message("Kişisel yapılacaklar listenize hoşgeldiniz. Bana yollayacağın herhangi bir metin saklayacağım. Öğe silmek için /done komutunu gönderin", chat)
+            send_message("Kişisel yapılacaklar listenize hoşgeldiniz. Bana yollayacağın herhangi bir metini saklayacağım. Öğe silmek için /bitti komutunu gönderin", chat)
         elif text.startswith("/"):
             continue
         elif text in items:
