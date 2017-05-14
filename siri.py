@@ -8,6 +8,7 @@ def loading():
         sys.stdout.write("\033[F")
         time.sleep(.500)
 
+os.system("display dialog 'hello'")
 print("Adın ne?")
 if str(input()) == "Alper":
     loading()
