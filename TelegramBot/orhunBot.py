@@ -42,7 +42,7 @@ def get_last_chat_id_and_text(updates):
     return (text, chat_id)
 
 def send_message(text, chat_id):
-    text = "anan"
+    text = "ağla"
     url = URL + "sendMessage?text={}&chat_id={}".format(text, chat_id)
     get_url(url)
 
