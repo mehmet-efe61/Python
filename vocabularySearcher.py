@@ -16,7 +16,6 @@ word=str(input("Kelimeyi girin\n"))
 os.system("say "+word+" -v daniel")
 
 url="http://dictionary.cambridge.org/dictionary/turkish/"+word
-print(url)
 page=urllib.request.urlopen(url)
 soup=BeautifulSoup(page,"html.parser")
 print("Example: "+(soup.find('div',{"class":"examp emphasized"}).text).strip())
