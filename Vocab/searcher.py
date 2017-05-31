@@ -12,8 +12,13 @@ def translate():
     soup=BeautifulSoup(page,"html.parser")
     print(lang+": "+(soup.find('span',{"class":"trans"}).text).strip())
 
-word=str(input("Kelimeyi girin\n"))
+word=str(input("Enter the word\n"))
 os.system("say "+word+" -v daniel")
+
+url="http://dictionary.cambridge.org/dictionary/english/"+word
+page=urllib.request.urlopen(url)
+soup=BeautifulSoup(page,"html.parser")
+print("Definition: "+(soup.find('b',{"class":"def"}).text).strip())
 
 url="http://dictionary.cambridge.org/dictionary/turkish/"+word
 page=urllib.request.urlopen(url)
